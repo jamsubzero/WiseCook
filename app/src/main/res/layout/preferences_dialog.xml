@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@color/button_material_light"
+        android:id="@+id/relativeLayout2">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/headerIcon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            app:srcCompat = "@drawable/ic_settings_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="User Settings"
+            android:id="@+id/headerText"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/headerIcon"
+            android:layout_alignBottom="@+id/headerIcon"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don&apos;t ask ingredient quantity"
+        android:id="@+id/prefSwitch"
+        android:checked="false"
+        android:textSize="15dp"
+        android:padding="17dp"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/prefSwitch"
+        android:weightSum="2"
+        android:id="@+id/linearLayout7">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/prefSave"
+            android:layout_below="@+id/prefSwitch"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/prefCancel"
+            android:layout_alignBottom="@+id/prefSave"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>

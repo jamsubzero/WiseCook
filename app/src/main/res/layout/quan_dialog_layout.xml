@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/diaHeader"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+
+        android:background="@color/button_material_light"
+        android:paddingTop="8dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How much patola do you have?"
+        android:id="@+id/diaQuest"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingBottom="10dp"
+        android:layout_toEndOf="@+id/diaIcon"
+        android:layout_toRightOf="@+id/diaIcon"
+        android:minLines="2" />
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:id="@+id/diaIcon"
+        android:src="@drawable/parsley1"
+        android:scaleType="fitXY"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="10dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/choice"
+        android:layout_below="@+id/diaHeader"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="10dp"
+       >
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:id="@+id/radioGroup">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specify Quantity"
+                android:id="@+id/diaIHave"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:checked="true"
+                android:layout_toLeftOf="@+id/diaEnough"
+                android:layout_toStartOf="@+id/diaEnough"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I have enough"
+                android:id="@+id/diaEnough"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:checked="false"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/diaInputs"
+        android:layout_below="@+id/choice"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/diaQuan"
+            android:layout_alignParentLeft="true"
+
+            android:hint="Enter Quantity"
+            android:inputType="numberDecimal" />
+
+        <Spinner
+            android:id="@+id/diaUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/diaQuan"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/diaQuan"
+            android:background="@android:color/darker_gray" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/diaEqui"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:lineSpacingMultiplier="0.8"
+        android:hint="No equivalent"
+        android:textColor="@android:color/black"
+        android:paddingLeft="5dp"
+        android:paddingRight="25dp"
+        android:textSize="12dp"
+        android:layout_below="@+id/diaInputs" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I have enoungh, don&apos;t ask again"
+        android:id="@+id/diaSwitch"
+        android:checked="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:layout_below="@+id/diaEqui"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:dividerPadding="2dp"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@+id/diaSwitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:id="@+id/diaOk"
+            android:layout_below="@+id/diaQuan"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:enabled="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/diaCancel"
+            android:layout_below="@+id/diaQuan"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

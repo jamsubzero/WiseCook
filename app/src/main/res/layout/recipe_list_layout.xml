@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mit.jamsubzero.wisecook.RecipeResult.RecipeMainActivity">
+
+    <LinearLayout
+        android:id="@+id/filterLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:weightSum="3"
+        android:background="@android:drawable/screen_background_dark_transparent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Sort by:"
+            android:id="@+id/textView4"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="@android:color/background_light"
+            android:paddingRight="15dp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/filter"
+            android:layout_alignBottom="@+id/diaQuan"
+            android:layout_toRightOf="@+id/diaQuan"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:focusable="true"
+            android:entries="@array/ent_filter"
+            android:layout_weight="3" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textOff="ASC"
+            android:textOn="DESC"
+            android:id="@+id/order"
+            android:checked="true" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipeList"
+        android:listSelector="#00000000"
+        android:choiceMode="singleChoice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/messageResult" />
+
+    <TextView
+        android:id="@+id/empty"
+        android:text="No suggested recipe.\nPlease consider changing your\n preferences (i.e. Cuisine, Meals, Other, Ingredients etc.)."
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/messageResult" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/messageResult"
+        android:layout_below="@+id/filterLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:textSize="12sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+
+        android:text="Recipe suggestions"
+        android:gravity="center_horizontal"
+        android:onClick="algoLevelEvent" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8099472786932887/7824498790"></com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>

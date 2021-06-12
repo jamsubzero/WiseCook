@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip"
+
+    >
+
+
+    <com.mit.jamsubzero.wisecook.xExtras.CheckableImageView
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:id="@+id/ingGridIcon"
+        android:src="@drawable/parsley1"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="false"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:background="@drawable/img_selector"
+        android:state_checked = "false"
+       />
+
+    <TextView
+        android:id="@+id/recBookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Parsley"
+        android:singleLine="false"
+        android:layout_below="@+id/ingGridIcon"
+        android:layout_alignLeft="@+id/ingGridIcon"
+        android:layout_alignStart="@+id/ingGridIcon"
+        android:layout_alignRight="@+id/ingGridIcon"
+        android:layout_alignEnd="@+id/ingGridIcon"
+        android:maxLines="3"
+        android:gravity="center"
+        android:textColor="@color/abc_input_method_navigation_guard" />
+
+    <TextView
+        android:id="@+id/ingGridAssoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:text="parsley assoc"
+        android:layout_below="@+id/recBookName"
+        android:singleLine="false"
+        android:layout_alignLeft="@+id/recBookName"
+        android:layout_alignStart="@+id/recBookName"
+        android:layout_alignRight="@+id/recBookName"
+        android:layout_alignEnd="@+id/recBookName"
+        android:maxLines="3"
+        android:gravity="center"
+        android:textColor="@color/abc_input_method_navigation_guard" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip" >
+
+
+    <ImageView
+        android:id="@+id/ingIcon"
+        android:layout_width="60dp"
+        android:layout_height="47dp"
+        android:src="@drawable/parsley1"
+        android:adjustViewBounds="false"
+        android:scaleType="fitXY"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/recBookName"
+        android:layout_marginRight="5dp"
+        android:layout_alignBottom="@+id/recBookDate" />
+
+    <TextView
+        android:id="@+id/recBookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Parsley"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/ingIcon"
+        android:layout_toEndOf="@+id/ingIcon"
+        android:singleLine="true"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/recBookDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="parsley assoc"
+        android:layout_below="@+id/recBookName"
+        android:layout_alignRight="@+id/recBookName"
+        android:layout_alignEnd="@+id/recBookName"
+        android:layout_toRightOf="@+id/ingIcon"
+        android:layout_toEndOf="@+id/ingIcon"
+        android:singleLine="true"
+        android:textColor="@color/abc_secondary_text_material_light" />
+
+
+</RelativeLayout>

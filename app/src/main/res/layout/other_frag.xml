@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mit.jamsubzero.wisecook.MainFragment">
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Other Preferences"
+        android:id="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textColor="#000000" />
+    <!--   android:background="@drawable/border"
+    -->
+
+
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="2dp"
+       android:background="@color/colorPrimaryDark"
+       android:layout_below="@+id/textView"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:layout_marginTop="4dp"
+       android:layout_marginBottom="4dp"
+       android:id="@+id/sep" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Preparation time less than:"
+        android:id="@+id/textView13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="normal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/hint_foreground_material_light"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_below="@+id/sep" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Number of servings at least:"
+        android:id="@+id/textView15"
+        android:textStyle="normal"
+        android:background="@color/hint_foreground_material_light"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Calorie limit per serving:"
+        android:id="@+id/textView16"
+        android:textStyle="normal"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/hint_foreground_material_light"
+
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4"
+        android:weightSum="6"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:text="-"
+            android:id="@+id/prepMinus"
+            android:layout_below="@+id/linearLayout4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="22dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/prepQuan"
+            android:gravity="fill_vertical|center_horizontal"
+            android:layout_weight="2"
+            android:hint="(any)" />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:id="@+id/prepPlus"
+            android:layout_below="@+id/linearLayout4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="minutes"
+            android:id="@+id/textView14"
+            android:layout_below="@+id/textView13"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="left|center_vertical"
+            android:layout_weight="2"
+            android:lines="1"
+            android:textColor="@android:color/background_dark" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout5"
+        android:weightSum="6"
+        android:layout_below="@+id/textView16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:text="-"
+            android:id="@+id/calMinus"
+            android:layout_below="@+id/linearLayout4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="22dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/calQuan"
+            android:gravity="fill_vertical|center_horizontal"
+            android:layout_weight="2"
+            android:hint="(any)" />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:id="@+id/calPlus"
+            android:layout_below="@+id/linearLayout4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="/serving"
+            android:id="@+id/textView17"
+            android:layout_below="@+id/textView13"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="left|center_vertical"
+            android:layout_weight="2"
+            android:lines="1"
+            android:textColor="@android:color/background_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout6"
+        android:weightSum="6"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/textView15"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:text="-"
+            android:id="@+id/servMinus"
+            android:layout_below="@+id/linearLayout4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="22dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/servQuan"
+            android:gravity="fill_vertical|center_horizontal"
+            android:layout_weight="2"
+            android:hint="(any)" />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:id="@+id/servPlus"
+            android:layout_below="@+id/linearLayout4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="servings"
+            android:id="@+id/textView18"
+            android:layout_below="@+id/textView13"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:lines="1"
+            android:textColor="@android:color/background_dark" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mit.jamsubzero.wisecook.xExtras.CheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip"
+
+    android:gravity="center">
+
+
+    <ImageView
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:id="@+id/ingGridIcon"
+        android:src="@drawable/abc_ic_menu_overflow_material"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="false"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        />
+
+       <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+           android:checked="false"
+           android:id="@+id/ingCheck"
+           android:layout_centerVertical="true"
+           android:layout_toRightOf="@+id/ingGridIcon"
+           android:layout_toEndOf="@+id/ingGridIcon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="parsley"
+        android:id="@+id/recBookName"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/ingGridIcon"
+        android:layout_alignEnd="@+id/ingGridIcon" />
+
+</com.mit.jamsubzero.wisecook.xExtras.CheckableRelativeLayout>

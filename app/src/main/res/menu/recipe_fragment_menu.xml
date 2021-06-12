@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wisecook="http://schemas.android.com/apk/res-auto">
+
+         <item
+        android:id="@+id/action_settings"
+        android:title="Preferences"
+        android:icon="@drawable/ic_settings_black_24dp"
+        wisecook:showAsAction="always"
+       />
+
+      <item
+        android:id="@+id/action_overflow"
+        android:title="Bookmarks"
+        android:icon="@drawable/abc_ic_menu_overflow_material"
+        wisecook:showAsAction="always" >
+          <menu>
+                <item
+                    android:id="@+id/action_about"
+                    android:title="About"
+                    android:icon="@drawable/ic_code_black_24dp"
+                    >
+                </item>
+              <!-- comment, remove help
+                <item
+                    android:id="@+id/action_help"
+                    android:title="Help"
+                    android:icon="@drawable/ic_help_black_24dp"
+                    >
+                </item>
+                -->
+           </menu>
+    </item>
+</menu>

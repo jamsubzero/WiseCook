@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">WiseCook</string>
+    <string name="title_activity_display_recipe">Recipe</string>
+    <string name="title_activity_display_recipe_results">Suggested Recipe</string>
+    <string-array name="ent_volume">
+        <item>cup</item>
+        <item>tsp</item>
+        <item>tbsp</item>
+        <item>fl. oz</item>
+        <item>l</item>
+        <item>ml</item>
+        <item>pt</item>
+        <item>qt</item>
+    </string-array>
+    <string-array name="ent_mass">
+        <item>oz</item>
+        <item>lb</item>
+        <item>kg</item>
+        <item>g</item>
+        <item>mg</item>
+</string-array>
+
+    <string-array name="ent_filter">
+        <item>Suggested</item>
+        <item>Preparation time</item>
+        <item>Number of servings</item>
+        <item>Calorie per serving</item>
+    </string-array>
+</resources>
